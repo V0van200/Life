@@ -1,0 +1,5 @@
+const CACHE='life-shell-06';
+const FILES=['./','./index.html','./assets/life-ui.css?v=0.6','./assets/life-core.js?v=0.3','./assets/life-app.js?v=0.6','./assets/life-learning.js?v=0.4','./assets/life-goals.js?v=0.6','./assets/life-comfort.js?v=0.6','./manifest.webmanifest','./assets/icon-192.png','./assets/icon-512.png'];
+self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES))));
+self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('life-shell-')&&k!==CACHE).map(k=>caches.delete(k))))));
+self.addEventListener('fetch',e=>{const u=new URL(e.request.url);if(e.request.method!=='GET'||u.origin!==self.location.origin||!u.pathname.startsWith(new URL(self.registration.scope).pathname))return;e.respondWith(caches.open(CACHE).then(async c=>{let cached=await c.match(e.request);if(cached)return cached;try{return await fetch(e.request)}catch(err){if(e.request.mode==='navigate')return c.match('./index.html');throw err}}))});
