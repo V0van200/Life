@@ -1,0 +1,9 @@
+node_modules/
+www/
+*.jks
+*.keystore
+*.apk
+*.aab
+.env*
+android/local.properties
+release/

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Life</string>
+    <string name="title_activity_main">Life</string>
+    <string name="package_name">ru.vovan20.life</string>
+    <string name="custom_url_scheme">ru.vovan20.life</string>
+</resources>
