@@ -1,8 +1,0 @@
-{
-  "appId": "ru.vovan20.life",
-  "appName": "Life",
-  "webDir": "www",
-  "server": { "hostname": "localhost", "androidScheme": "https" },
-  "android": { "allowMixedContent": false, "webContentsDebuggingEnabled": false },
-  "plugins": { "CapacitorHttp": { "enabled": false } }
-}
