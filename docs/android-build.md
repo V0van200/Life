@@ -1,4 +1,4 @@
-# Life Android 0.7.0
+# Life Android 0.8.0
 
 Package: `ru.vovan20.life`. Origin: `https://localhost`. Do not change either: updates must retain the signing certificate and WebView origin to retain local data.
 
@@ -33,3 +33,5 @@ This first APK retains existing localStorage storage WITHOUT encryption. Disable
 Music is still the existing web player, with session-only file selection. Background playback, persistent music library, encrypted storage and biometrics are not implemented in this release. Demo records are still the existing mixed example set, not an isolated account.
 
 Before real use: on a physical phone, add a record, close/reopen, export/import, try airplane mode. For an update test install a higher version signed by the SAME key over this version, then verify records and settings. Do not uninstall or clear app data during this test.
+
+Work wallet accounting and data compatibility are documented in [work-wallet.md](work-wallet.md).
